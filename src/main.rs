@@ -1,7 +1,7 @@
 use std::process;
 use std::time::Duration;
+
 fn main() {
-    //ask user for time
     println!("Enter the timer in minutes");
     let mut inp = String::new();
     std::io::stdin()
@@ -15,7 +15,9 @@ fn main() {
         }
     }
 }
-fn make_timer(time: u32) {}
-
-#[cfg(test)]
-mod tests {}
+fn make_timer(time: u32) {
+    let time = Duration::new((time * 60).into(), 0);
+    use std::thread;
+    thread::sleep(time);
+    println!("Times Up!");
+}
