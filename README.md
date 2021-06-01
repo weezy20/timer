@@ -1,5 +1,5 @@
 # timer
 A command line based timer app.
 
-#Usage :
+# Usage :
 timer -h (hours) -m (minutes) -s(seconds)
